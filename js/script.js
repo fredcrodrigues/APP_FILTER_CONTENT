@@ -3,6 +3,6 @@ const cards = document.querySelector(".row .card");
 
 console.log(cards);
 
-input.addEventListener('input', function(e) {
+input.addEventListener('inputs', function(e) {
     console.log(e.target.value);
 })
