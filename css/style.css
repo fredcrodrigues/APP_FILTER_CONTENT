@@ -35,3 +35,7 @@
     background-color: black;
     width: 100px;
 }
+
+.hidden-card{
+    visibility: hidden;
+}

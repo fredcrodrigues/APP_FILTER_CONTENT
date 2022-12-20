@@ -1,8 +1,42 @@
 const input = document.querySelector(".filter input");
-const cards = document.querySelector(".row .card");
+const cardsRow = document.querySelector(".cards ");
 
-console.log(cards);
+
+const filterCard = (cardArray, inputvalues, returnBool) =>  cardArray
+    
+    .filter(card => {
+       
+        const boolcard =  card.id.toLowerCase().includes(inputvalues)
+        console.log(boolcard)
+       
+        return returnBool? boolcard : !boolcard
+    })
+    
+
+
+const hiddenfilter = (cardsArray, inputvalues) => {
+    
+    filterCard(cardsArray, inputvalues, false)
+    .forEach(cards => {
+        cards.classList.add("hidden-card")
+   })
+}
+
+const showFilter = (cardsArray, inputvalues) => {
+    
+    filterCard(cardsArray, inputvalues, true)
+    .forEach(cards => {
+        cards.classList.remove("hidden-card")
+   })
+}
+
 
 input.addEventListener('input', function(e) {
-    console.log(e.target.value);
+    const values  = e.target.value.trim().toLowerCase();
+    const cardsArray =  Array.from(cardsRow.children);
+    console.log(cardsArray)
+    
+    hiddenfilter(cardsArray, values )
+    showFilter(cardsArray, values)
+   
 })
