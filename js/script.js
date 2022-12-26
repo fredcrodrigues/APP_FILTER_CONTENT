@@ -40,7 +40,7 @@ input.addEventListener('input', function(e) {
     const values  = e.target.value.trim().toLowerCase();
     const cardsArray =  Array.from(cardsRow.children);
 
-
+    console.log()
     hiddenfilter(cardsArray, values )
     showFilter(cardsArray, values )
    

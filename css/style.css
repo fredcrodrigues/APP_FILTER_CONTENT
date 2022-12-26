@@ -21,7 +21,7 @@
     text-align: center;
     color: #323330;
 }
-.title h4{
+.title h5{
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
 }
@@ -89,6 +89,7 @@
     height: 90px;
     text-align: center;
     color: #323330;
+    
 }
 .footer span{
     font-weight: 900;
